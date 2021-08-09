@@ -24,3 +24,16 @@
     font-size: 14px;
     text-align: left;
 }
+
+.rb{
+    margin-left: 10px;
+    width: 50%;
+    float: right;
+    margin-right: -5px;
+}
+
+.lb{
+    width: 50%;
+    float: left;
+    margin-left: -10px;
+}

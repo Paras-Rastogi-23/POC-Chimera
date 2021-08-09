@@ -34,15 +34,17 @@ export class UserUpdateComponent implements OnInit {
     //console.log(this.updateDetails,"details to be updated");
   }
 
-  doUpdate(){
-    let confirmation = confirm("Do you want to Update the user ?");
-     if(confirmation)
+  doUpdate(result:boolean){
+    if(result)
     {
      this.userDetails = JSON.parse(localStorage.getItem('users'));
      this.userDetails[this.indexId] = this.updateForm.value;
      localStorage.setItem('users' , JSON.stringify(this.userDetails));
      this.router.navigate(['/users']);
     }     
+    else{
+      this.router.navigate(['/users']);
+    }
   }
 
   createForm(){

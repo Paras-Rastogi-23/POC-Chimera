@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Poc } from 'src/app/models/poc.model';
 import { UserServiceService } from 'src/app/services/user-service.service';
 import { ToastrService } from 'ngx-toastr';
@@ -13,17 +13,20 @@ export class LoginComponent implements OnInit {
 
   condition:boolean=false;
   loginDetails = this.userModel.userLoginModel;
+  returnUrl : string ='';
   
 
   constructor(private router : Router,
     private userService : UserServiceService,
     private userModel : Poc,
-    private toastrService : ToastrService) { }
+    private toastrService : ToastrService,
+    private route : ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   doLogin(){
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
     if(this.loginDetails.username == ''){
       alert("mention the credentials properly");
     }
@@ -34,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.toastrService.success("Login Successful","Success",{
         timeOut:5000,
       });
-      this.router.navigate(['/home']);
+      this.router.navigate([this.returnUrl]);
 
     }else{
       //console.log("wrong Credentials");
@@ -42,7 +45,6 @@ export class LoginComponent implements OnInit {
         timeOut:7000,
       });
     }
-    
   }
 
 }

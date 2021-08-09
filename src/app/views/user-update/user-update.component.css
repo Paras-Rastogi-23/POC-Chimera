@@ -1,0 +1,26 @@
+@import '../../header/header.component.css';
+
+.cred{
+    width: 40%;
+    align-items: center;
+    margin-left: 30%;
+    margin-bottom: 0px;
+}
+.btn{
+    width: 40%;
+    margin-left: 31%;
+}
+.form-control{
+    border-radius: 0px;
+}
+.px-4{
+    width: 47%;
+    margin-left: 15px;
+    margin-right: -15px;
+}
+
+.error-text {
+    color: #e50019;
+    font-size: 14px;
+    text-align: left;
+}

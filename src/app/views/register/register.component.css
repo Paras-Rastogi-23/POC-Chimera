@@ -1,0 +1,14 @@
+@import '../../header/header.component.css';
+
+.cred{
+    width: 40%;
+    align-items: center;
+    margin-left: 30%;
+}
+.btn{
+    width: 40%;
+    margin-left: 31%;
+}
+.form-control{
+    border-radius: 0px;
+}

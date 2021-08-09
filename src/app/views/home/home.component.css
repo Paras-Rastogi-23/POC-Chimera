@@ -1,0 +1,30 @@
+@import '../../header/header.component.css';
+
+.container{
+    margin-top: -3.5%;
+    color: white;
+    border-bottom: #a49dc2;
+    box-shadow: rgb(43, 26, 113) 0px 0px 10px 0px;
+    background: rgb(27, 19, 58);
+    height: 700px;
+    width: auto;
+}
+.col-xs-12{
+    text-align: center;
+    
+}
+  
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0) scale(0);
+        opacity: 1;
+    }
+    
+      100%
+    {
+        transform: translateY(-900px) scale(4);
+        opacity: 0;
+    }
+}

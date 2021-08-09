@@ -1,0 +1,52 @@
+<nav class="navbar navbar-inverse" style="height: 60px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+                <h1 style="margin: auto; margin-top: -1.7%;">
+                    <i class="fa fa-check"></i>
+                    <strong>POC</strong>
+                </h1>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse ">
+            <ul class="nav navbar-nav navbar-right navbar-toggler">
+                <li class="nav-list"><a href="#" routerLink="/login">
+                        <h3>Log In</h3>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="animated fadeIn app-body">
+    <main style="margin: auto; align-items: center;">
+        <div class="container">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-12">
+                <form >
+                    <h1 style="text-align: center;">Add New User</h1>
+                    <p style="text-align: center;" appChangeStyle>Add new UserAccount</p>
+                    <div class="cred">
+                        <input type="text" class="form-control" name="text" #name="ngModel" [(ngModel)]="addNewDetails.username"
+                            placeholder="Username"  required>
+                    </div>
+                    <div class="cred">
+                        <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="addNewDetails.password"
+                            placeholder="Password"   required>
+                    </div>
+                    <div class="cred">
+                        <input type="text" class="form-control" name="firstName" #firstName="ngModel" [(ngModel)]="addNewDetails.firstName"
+                            placeholder="First Name"  required>
+                    </div>
+                    <div class="cred">
+                        <input type="text" class="form-control" name="lastName" #lastName="ngModel" [(ngModel)]="addNewDetails.lastName"
+                            placeholder="Last Name"  required>
+                    </div>
+                    <div class="cred">
+                        
+                        <button type="button" (click)="addNew()" class="btn btn-primary px-4">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>

@@ -23,10 +23,10 @@ export class LoginComponent implements OnInit {
     private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
   }
 
   doLogin(){
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/home';
     if(this.loginDetails.username == ''){
       alert("mention the credentials properly");
     }

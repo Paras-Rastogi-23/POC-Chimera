@@ -40,9 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule
   ],
   providers: [
-    { provide : HTTP_INTERCEPTORS , 
-      useClass : LoggingInterceptor,
-      multi:true}
+    { provide : HTTP_INTERCEPTORS, useClass:LoggingInterceptor, multi:true},
   ],
   bootstrap: [AppComponent],
   exports: [FormsModule]

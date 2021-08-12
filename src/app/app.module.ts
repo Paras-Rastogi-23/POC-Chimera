@@ -7,9 +7,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChangeStyleDirective } from './directives/change-style.directive';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
-import { UserUpdateComponent } from './views/user-update/user-update.component';
-import { AddUserComponent } from './views/add-user/add-user.component';
-import { UserListComponent } from './views/user-list/user-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './views/register/register.component';
@@ -22,9 +19,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChangeStyleDirective,
     HomeComponent,
     LoginComponent,
-    UserUpdateComponent,
-    AddUserComponent,
-    UserListComponent,
     HeaderComponent,
     RegisterComponent
    ],

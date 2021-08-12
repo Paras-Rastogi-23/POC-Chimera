@@ -29,11 +29,13 @@ export class AddUserComponent implements OnInit {
       this.toastrService.success("Register Successful","Error",{
       timeOut:5000,
       });
+      this.router.navigate(['/users']);
     }
     else{
       this.toastrService.error("User Already Exist","Error",{
       timeOut:7000,
       });
+      this.router.navigate(['/users']);
     }
   }
 

@@ -59,7 +59,7 @@
                                         <div class="row">
                                             <a type="button" title="" (click)="Update(i)" class="btn btn-sm btn-info" title="view">
                                                 Update</a>&nbsp;
-                                            <a type="button" class="btn btn-sm  btn-danger" title="{{user.username}}"
+                                            <a  *ngIf="user.username != 'Admin'" type="button" class="btn btn-sm  btn-danger" title="{{user.username}}"
                                              (click)="deleteUser(i)">
                                                 Delete</a>
                                         </div>
